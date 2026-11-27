@@ -54,7 +54,7 @@ export const empresa = {
       cargo: "Engenheiro de software e Gerente de equipe",
       foto: "/images/dixon.png",
       alt: "Foto de Lucas Renan Dixon",
-      descricao: "Responsável por planejar, desenvolver e supervisionar projetos de software, coordenando equipes de tecnologia, distribuindo tarefas e garantindo a qualidade e a eficiência das entregas."
+      descricao: " Responsável pelo desenvolvimento de sistemas, planejamento de projetos e coordenação da equipe, garantindo soluções eficientes e de qualidade."
     }
   ]
 };
