@@ -55,6 +55,16 @@ export const empresa = {
       foto: "/images/dixon.png",
       alt: "Foto de Lucas Renan Dixon",
       descricao: " Responsável pelo desenvolvimento de sistemas, planejamento de projetos e coordenação da equipe, garantindo soluções eficientes e de qualidade."
+    },
+    {
+
+      nome: "Luiz fernando Evans",
+      cargo: "Analista de Dados",
+      foto: "/images/america.png",
+      alt: "Foto de Luiz fernando Evans",
+      descricao: "Responsável por coletar, organizar e analisar informações, transformando dados em insights que ajudam na tomada de decisões e no planejamento estratégico da empresa."
+
     }
+
   ]
 };
