@@ -1,68 +1,36 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | Sousas Tecnologias</title>
-	</head>
-	<body>
-		<header>
-			<strong>Sousas Tecnologias</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a Sousas Tecnologias</h1>
-				<p>Em 2005 duas alunas da FATEC de SP , no mesmo curso e no mesmo Projeto Integrador,
-encontraram uma dor real: pequenas e médias empresas invisíveis no digital, perdendo
-clientes e dinheiro por não terem site ou plataforma. Elas não ignoraram , e assim em
-anos depois da conclusão da faculdade em 2011 nasceu a Sousas Tecnologias, uma
-software house que cria sites e plataformas para quem constrói o próprio negócio, unindo
-tecnologia com empatia para aliviar o estresse do mercado e multiplicar lucros. "transformamos a sua presença digital em resultados." Sousas tecnologias representa não
-só a firmeza que temos mas a união das mentes que pensam em um mercado próspero e seguro.</p>
-			</section>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Desenvolver sites e plataformas digitais modernas, funcionais e acessíveis, transformando
-as necessidades dos clientes em soluções tecnológicas eficientes.</p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Tornar-se uma empresa reconhecida pela inovação e qualidade no desenvolvimento de
-sites e plataformas digitais.</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Inovação</h3>
-						<p> Buscar novas tecnologias e acompanhar as mudanças do mercado, sempre procurando maneiras melhores de resolver problemas.</p>
-					</li>
-					<li>
-						<h3>Qualidade</h3>
-						<p>Garantir que cada produto ou serviço seja desenvolvido com eficiência, cuidado e atenção aos detalhes.</p>
-					</li>
-					<li>
-						<h3>Transparência</h3>
-						<p>Manter uma comunicação clara e honesta, construindo relações de confiança com clientes e parceiros.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Sousas Tecnologias. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>
